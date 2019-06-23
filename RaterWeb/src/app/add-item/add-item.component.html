@@ -1,1 +1,14 @@
-<input 
+<div class="container">
+    <h1>Add new item</h1>
+    <form #itemForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating</label>
+            <input type="number" class="form-control" id="rating" required [(ngModel)]="model.rating" name="rating">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

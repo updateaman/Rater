@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../item';
 
 @Component({
   selector: 'app-add-item',
@@ -8,6 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class AddItemComponent implements OnInit {
 
   constructor() { }
+
+  model = new Item(0, '', 1);
+
+  submitted = false;
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
+  // TODO: Remove this when we're done
+  get diagnostic() { return JSON.stringify(this.model); }
 
   ngOnInit() {
   }
